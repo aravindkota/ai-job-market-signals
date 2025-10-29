@@ -1,0 +1,37 @@
+version: 1
+description: >-
+  Schema for skill taxonomy files. Each domain file defines categories and skills
+  with canonical names, aliases, keywords, and tags to support extraction,
+  disambiguation, and analytics.
+
+fields:
+  domain:
+    type: string
+    required: true
+  version:
+    type: integer
+    required: true
+  meta:
+    type: object
+    required: false
+    fields:
+      updated: { type: string, required: false }
+      maintainers: { type: array, items: string, required: false }
+  categories:
+    type: array
+    required: true
+    items:
+      type: object
+      fields:
+        name: { type: string, required: true }
+        skills:
+          type: array
+          items:
+            type: object
+            fields:
+              name: { type: string, required: true }
+              aliases: { type: array, items: string, required: false }
+              keywords: { type: array, items: string, required: false }
+              tags: { type: array, items: string, required: false }
+              notes: { type: string, required: false }
+

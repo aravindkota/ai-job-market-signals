@@ -10,3 +10,6 @@ alembic
 loguru
 tenacity
 pytest
+matplotlib
+pandas
+seaborn

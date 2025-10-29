@@ -1,0 +1,96 @@
+domain: genai
+version: 1
+meta:
+  updated: 2025-10-28
+  maintainers: ["core-team"]
+categories:
+  - name: Models
+    skills:
+      - name: GPT-4
+        aliases: ["gpt4", "gpt 4"]
+        keywords: ["openai", "chatgpt", "function calling"]
+        tags: ["llm", "api"]
+      - name: Claude
+        aliases: ["anthropic claude", "claude-3"]
+        keywords: ["anthropic", "opus", "sonnet", "haiku"]
+        tags: ["llm", "api"]
+      - name: Llama
+        aliases: ["llama2", "llama 3", "meta llama"]
+        keywords: ["meta", "opensource"]
+        tags: ["llm", "local"]
+      - name: Mistral
+        aliases: ["mixtral", "mistral 7b"]
+        keywords: ["mistral ai", "opensource"]
+        tags: ["llm", "local"]
+
+  - name: Retrieval / RAG
+    skills:
+      - name: RAG
+        aliases: ["retrieval augmented generation", "rag pipeline"]
+        keywords: ["chunking", "embedding", "reranking"]
+        tags: ["pattern"]
+      - name: Vector Databases
+        aliases: ["vector db", "vector store"]
+        keywords: ["faiss", "pinecone", "weaviate", "qdrant", "milvus"]
+        tags: ["database", "search"]
+      - name: Embeddings
+        aliases: ["text embedding", "sentence embeddings"]
+        keywords: ["bge", "e5", "all-mpnet-base", "text-embedding-3-large"]
+        tags: ["nlp", "representation"]
+
+  - name: Tooling / Frameworks
+    skills:
+      - name: LangChain
+        aliases: ["lang chain"]
+        keywords: ["agents", "tools", "runnables"]
+        tags: ["framework"]
+      - name: LlamaIndex
+        aliases: ["gpt index", "llama index"]
+        keywords: ["indices", "retrievers"]
+        tags: ["framework"]
+      - name: Guardrails
+        aliases: ["guardrails ai", "outlines"]
+        keywords: ["schema", "validation", "pydantic"]
+        tags: ["safety", "validation"]
+
+  - name: Orchestration / Agents
+    skills:
+      - name: Function Calling
+        aliases: ["tool calling", "tools"]
+        keywords: ["structured outputs", "pydantic"]
+        tags: ["orchestration"]
+      - name: Agent Frameworks
+        aliases: ["autogen", "crewai"]
+        keywords: ["multi-agent", "planning", "memory"]
+        tags: ["agents"]
+
+  - name: Evaluation / Safety
+    skills:
+      - name: Ragas
+        aliases: ["ragas eval"]
+        keywords: ["faithfulness", "context precision"]
+        tags: ["evaluation"]
+      - name: LLM Evaluation
+        aliases: ["g-eval", "pairwise eval"]
+        keywords: ["rubrics", "grading"]
+        tags: ["evaluation"]
+      - name: Safety / Guardrails
+        aliases: ["toxicity filters", "pii redaction"]
+        keywords: ["policy", "jailbreak", "content filter"]
+        tags: ["safety"]
+
+  - name: Infrastructure
+    skills:
+      - name: vLLM
+        aliases: ["vllm serving"]
+        keywords: ["throughput", "spec decode"]
+        tags: ["serving"]
+      - name: Triton Inference Server
+        aliases: ["nvidia triton"]
+        keywords: ["gpu", "deploy"]
+        tags: ["serving"]
+      - name: Prompt Engineering
+        aliases: ["system prompts", "cot"]
+        keywords: ["few-shot", "structured prompting"]
+        tags: ["technique"]
+

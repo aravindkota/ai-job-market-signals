@@ -1,0 +1,19 @@
+version: 1
+updated: 2025-10-28
+aliases:
+  gpt4: GPT-4
+  "gpt 4": GPT-4
+  claude3: Claude
+  llama3: Llama
+  mixtral: Mistral
+  torch: PyTorch
+  tf: TensorFlow
+  sklearn: scikit-learn
+  yolo: YOLO
+  cv2: OpenCV
+  fbprophet: Prophet
+  pyspark: Apache Spark
+  lang chain: LangChain
+  llama index: LlamaIndex
+  vector db: Vector Databases
+  vector store: Vector Databases

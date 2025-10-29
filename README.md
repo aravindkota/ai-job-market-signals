@@ -159,6 +159,62 @@ docker run --env-file .env -p 8000:8000 upwork-ai-job-intel:dev
 
 ---
 
+## Trends (Demo Data)
+- Generate illustrative graphs (2023–2025):
+  - `python scripts/plot_trends.py`
+  - Outputs to `assets/`: `trend_line.png`, `indexed_trend.png`, `yoy_growth.png`
+- Data source: `data/trends_2023_2025.csv` (synthetic demo data)
+
+Example renders (generated locally):
+
+![Trend Line](assets/trend_line.png)
+
+![Indexed Trend](assets/indexed_trend.png)
+
+![YoY Growth](assets/yoy_growth.png)
+
+---
+
+## Taxonomy
+- Versioned skill taxonomy lives under `taxonomy/`:
+  - `taxonomy/skills.genai.v1.yaml` — Generative AI skills (models, RAG, tooling, orchestration, eval, infra)
+  - `taxonomy/skills.core_ml_ds.v1.yaml` — Core ML/DS skills (libraries, DL, data/MLOps, viz, NLP/CV, time series)
+  - `taxonomy/aliases.yaml` — Synonym-to-canonical mappings (e.g., `gpt4` → `GPT-4`)
+  - `taxonomy/schema.yaml` — Structure of taxonomy files
+- Propose changes via PRs; treat updates as schema‑versioned (e.g., `v2`) and document deltas.
+
+---
+
+## Observations (Critical Thoughts)
+- Demand signals from postings are noisy; budgets, titles, and skills vary by platform and region.
+- Hype cycles skew terms; normalize and disambiguate overlapping concepts (e.g., “agents,” “RAG,” “fine‑tuning”).
+- Cross‑source deduplication and taxonomy drift require early investment in canonical skill IDs and aliases.
+- Ethics and TOS: use official APIs, avoid scraping; handle PII and company identifiers responsibly.
+- Quality needs feedback loops: labeled sets, evaluation metrics, and transparent methodology.
+
+---
+
+## Roadmap (Phased TODO)
+- [ ] Phase 0 — Foundation (MVP)
+  - [ ] Normalized schema for postings (role, skills, seniority, budget, geo, remote)
+  - [ ] Skill taxonomy v1 applied in extraction + charts for 2023–2025
+  - [ ] Reproducible ETL and published methodology
+- [ ] Phase 1 — Multi‑Source & Dedupe
+  - [ ] Add 2–3 official APIs; currency/geography normalization
+  - [ ] Cross‑source dedupe (similarity + heuristics); quality audit
+- [ ] Phase 2 — Skill Intelligence (GenAI Focus)
+  - [ ] Hybrid extraction (rules + NER/embeddings) with disambiguation
+  - [ ] Co‑occurrence graphs and “skill bundles”; labeled eval set (F1 ≥ 0.8 for top skills)
+- [ ] Phase 3 — Analytics & Forecasts
+  - [ ] Cohort trends, budget modeling, velocity metrics; forecasting with confidence bands
+- [ ] Phase 4 — Productization
+  - [ ] Public API endpoints (`/trends`, `/skills`, `/bundles`, `/forecast`), alerts/digests
+  - [ ] Lightweight dashboard for exploration
+- [ ] Phase 5 — Quality & Governance
+  - [ ] Data contracts, lineage, tests; contribution guide and taxonomy governance
+
+---
+
 ## Troubleshooting
 - PowerShell execution policy blocks scripts: start a new PowerShell and run
   ```powershell
@@ -172,4 +228,3 @@ docker run --env-file .env -p 8000:8000 upwork-ai-job-intel:dev
 ## Notes
 - Use the official Upwork API; avoid scraping.
 - Respect rate limits; add retry/backoff in the GraphQL client when implementing.
-

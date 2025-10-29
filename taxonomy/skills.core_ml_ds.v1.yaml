@@ -1,0 +1,108 @@
+domain: core_ml_ds
+version: 1
+meta:
+  updated: 2025-10-28
+  maintainers: ["core-team"]
+categories:
+  - name: ML Libraries
+    skills:
+      - name: scikit-learn
+        aliases: ["sklearn"]
+        keywords: ["xgboost", "catboost", "lightgbm"]
+        tags: ["ml"]
+      - name: XGBoost
+        aliases: ["xgb"]
+        keywords: ["gbtree", "gblinear"]
+        tags: ["ml"]
+      - name: CatBoost
+        aliases: []
+        keywords: ["categorical", "gradient boosting"]
+        tags: ["ml"]
+
+  - name: Deep Learning
+    skills:
+      - name: PyTorch
+        aliases: ["torch"]
+        keywords: ["lightning", "accelerate"]
+        tags: ["dl"]
+      - name: TensorFlow
+        aliases: ["tf"]
+        keywords: ["keras"]
+        tags: ["dl"]
+
+  - name: Data & MLOps
+    skills:
+      - name: Pandas
+        aliases: []
+        keywords: ["dataframe", "etl"]
+        tags: ["data"]
+      - name: SQL
+        aliases: ["postgresql", "mysql", "sqlite"]
+        keywords: ["queries", "analytics"]
+        tags: ["data"]
+      - name: Apache Spark
+        aliases: ["pyspark", "spark"]
+        keywords: ["distributed", "etl"]
+        tags: ["data"]
+      - name: MLflow
+        aliases: []
+        keywords: ["tracking", "registry"]
+        tags: ["mlops"]
+      - name: Airflow
+        aliases: []
+        keywords: ["scheduling", "pipelines"]
+        tags: ["orchestration"]
+      - name: Docker
+        aliases: []
+        keywords: ["containers"]
+        tags: ["infra"]
+
+  - name: Visualization
+    skills:
+      - name: Matplotlib
+        aliases: []
+        keywords: ["plot"]
+        tags: ["viz"]
+      - name: Seaborn
+        aliases: []
+        keywords: ["statistics"]
+        tags: ["viz"]
+      - name: Plotly
+        aliases: []
+        keywords: ["interactive"]
+        tags: ["viz"]
+
+  - name: NLP & CV (Classic)
+    skills:
+      - name: spaCy
+        aliases: []
+        keywords: ["ner", "nlp"]
+        tags: ["nlp"]
+      - name: NLTK
+        aliases: []
+        keywords: ["classic nlp"]
+        tags: ["nlp"]
+      - name: OpenCV
+        aliases: ["cv2"]
+        keywords: ["image", "video"]
+        tags: ["cv"]
+      - name: YOLO
+        aliases: ["yolov5", "yolov8"]
+        keywords: ["object detection"]
+        tags: ["cv"]
+      - name: Detectron2
+        aliases: []
+        keywords: ["mask rcnn", "rcnn"]
+        tags: ["cv"]
+
+  - name: Time Series
+    skills:
+      - name: Prophet
+        aliases: ["fbprophet"]
+        keywords: ["forecasting"]
+        tags: ["timeseries"]
+      - name: ARIMA
+        aliases: []
+        keywords: ["statsmodels"]
+        tags: ["timeseries"]
+
