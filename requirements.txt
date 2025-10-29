@@ -1,0 +1,12 @@
+# PURPOSE: Core Python dependencies for the service.
+fastapi
+uvicorn
+httpx
+requests
+python-dotenv
+pydantic
+sqlalchemy
+alembic
+loguru
+tenacity
+pytest
